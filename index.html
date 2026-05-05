@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eloria Jewelry | Zarif ve Modern Takı Tasarımları</title>
+    <title>Eloria Jewelry | Özel Tasarımlar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <style>
-        /* Genel Stiller ve Renk Paleti */
+        /* Geliştirilmiş Estetik Renk Paleti */
         :root {
-            --bg-color: #fdfbf7;
-            --primary-color: #d4af37; /* Lüks Altın / Rose Gold Tonu */
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
+            --bg-color: #FAF8F5;       /* Fildişi / Krem */
+            --primary-color: #C5A059;   /* Mat Premium Altın Tonu */
+            --text-dark: #1C1B1A;      /* Yumuşak Gece Siyahı */
+            --text-light: #6E6A66;     /* Sıcak Gri */
             --white: #ffffff;
-            --card-shadow: rgba(0, 0, 0, 0.05);
+            --luxury-shadow: rgba(28, 27, 26, 0.03) 0px 20px 40px;
         }
 
         * {
@@ -22,31 +26,34 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Menüye tıklayınca sayfanın yumuşakça kaymasını sağlar */
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Üst Menü / Header */
         header {
-            background-color: var(--white);
-            padding: 20px 40px;
+            background-color: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px); /* Yarı saydam lüks cam efekti */
+            padding: 25px 40px;
             text-align: center;
-            border-bottom: 1px solid #f0e6df;
+            border-bottom: 1px solid #EAE5DF;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo {
-            font-size: 24pt;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28pt;
             font-weight: 300;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             color: var(--text-dark);
             text-transform: uppercase;
             text-decoration: none;
@@ -54,7 +61,8 @@
         }
 
         .logo span {
-            font-weight: 600;
+            font-style: italic;
+            font-weight: 400;
             color: var(--primary-color);
         }
 
@@ -65,21 +73,23 @@
         nav a {
             text-decoration: none;
             color: var(--text-light);
-            margin: 0 15px;
-            font-size: 10pt;
-            letter-spacing: 2px;
+            margin: 0 20px;
+            font-size: 9pt;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            transition: color 0.3s ease;
+            font-weight: 400;
+            transition: all 0.4s ease;
         }
 
         nav a:hover {
             color: var(--primary-color);
+            letter-spacing: 4px; /* Hafif genişleme efekti */
         }
 
         /* Ana Görsel Alanı / Hero Section */
         .hero {
-            height: 550px;
-            background: linear-gradient(rgba(44, 44, 44, 0.25), rgba(44, 44, 44, 0.45)), linear-gradient(135deg, #f5ecd7 0%, #e8dcbf 100%);
+            height: 600px;
+            background: linear-gradient(rgba(28, 27, 26, 0.15), rgba(28, 27, 26, 0.35)), linear-gradient(135deg, #F3EFE6 0%, #E3D9C4 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -90,150 +100,212 @@
         }
 
         .hero h1 {
-            font-size: 36pt;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 46pt;
             font-weight: 300;
-            letter-spacing: 8px;
-            margin-bottom: 15px;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
 
         .hero p {
-            font-size: 14pt;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18pt;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 36px;
+            padding: 16px 42px;
             background-color: var(--white);
             color: var(--text-dark);
             text-decoration: none;
-            border-radius: 0;
-            font-size: 10pt;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-size: 9pt;
+            font-weight: 500;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            transition: all 0.4s ease;
         }
 
         .btn:hover {
-            background-color: var(--primary-color);
+            background-color: transparent;
             color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+            border: 1px solid var(--white);
+            transform: translateY(-3px);
         }
 
-        /* Öne Çıkan Ürünler / Product Section */
+        /* Öne Çıkan Ürünler */
         .container {
             max-width: 1200px;
-            margin: 60px auto;
+            margin: 80px auto;
             padding: 0 20px;
         }
 
         .section-title {
+            font-family: 'Cormorant Garamond', serif;
             text-align: center;
-            font-size: 18pt;
-            font-weight: 400;
-            letter-spacing: 4px;
+            font-size: 26pt;
+            font-weight: 300;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            position: relative;
+            margin-bottom: 50px;
         }
 
         .section-title::after {
-            content: '';
+            content: '♦'; /* Zarif bir sembol dokunuşu */
             display: block;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary-color);
-            margin: 15px auto 0 auto;
+            font-size: 10pt;
+            color: var(--primary-color);
+            margin-top: 10px;
+            letter-spacing: 0;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
 
         .product-card {
             background-color: var(--white);
-            border: 1px solid #f2ebe4;
-            padding: 20px;
+            border-radius: 4px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 4px 10px var(--card-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--luxury-shadow);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transform: translateY(-8px);
+            box-shadow: rgba(28, 27, 26, 0.08) 0px 30px 60px;
         }
 
         .product-image-placeholder {
             width: 100%;
-            height: 300px;
-            background-color: #f7f3ed;
+            height: 320px;
+            background-color: #F6F4F0;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #bfae9c;
-            font-size: 11pt;
+            color: #A39E99;
+            font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            margin-bottom: 20px;
+            font-size: 13pt;
+            margin-bottom: 25px;
             letter-spacing: 1px;
+            border-radius: 2px;
         }
 
         .product-title {
-            font-size: 12pt;
-            font-weight: 500;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15pt;
+            font-weight: 400;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: var(--text-dark);
         }
 
         .product-price {
-            font-size: 13pt;
-            font-weight: 600;
+            font-size: 11pt;
+            font-weight: 400;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
 
-        /* Shopier Bağlantı Butonu */
+        /* Geliştirilmiş Buton */
         .shopier-btn {
             display: block;
             width: 100%;
-            padding: 12px 0;
+            padding: 14px 0;
             background-color: var(--text-dark);
             color: var(--white);
             text-decoration: none;
-            font-size: 9pt;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 8.5pt;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            transition: background-color 0.3s ease;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         .shopier-btn:hover {
             background-color: var(--primary-color);
+            transform: scale(1.02);
         }
 
-        /* Alt Bilgi / Footer */
-        footer {
-            background-color: #1a1a1a;
-            color: #999999;
-            text-align: center;
-            padding: 40px 20px;
+        /* Hikayemiz Bölümü */
+        .story-section {
+            background-color: var(--white);
+            padding: 100px 20px;
+            border-top: 1px solid #EAE5DF;
+        }
+
+        .story-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14pt;
+            color: var(--text-light);
+            line-height: 2;
+            letter-spacing: 0.5px;
+            margin-top: 30px;
+            font-weight: 300;
+        }
+
+        /* İletişim Bölümü */
+        .contact-section {
+            padding: 100px 20px;
+            background-color: var(--bg-color);
+            border-top: 1px solid #EAE5DF;
+        }
+
+        .contact-subtitle {
             font-size: 10pt;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .contact-label {
+            font-size: 8pt;
+            font-weight: 500;
+            color: var(--primary-color);
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .contact-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 11pt;
+            font-weight: 300;
             letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #141413;
+            color: #8C8782;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 9pt;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         footer p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
     </style>
 </head>
@@ -288,10 +360,10 @@
         </div>
     </main>
 
-    <section id="hikayemiz" style="background-color: #ffffff; padding: 90px 20px; border-top: 1px solid #f2ebe4;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <section id="hikayemiz" class="story-section">
+        <div style="max-width: 750px; margin: 0 auto; text-align: center;">
             <h2 class="section-title">Hikayemiz</h2>
-            <p style="font-size: 11pt; color: #666666; line-height: 1.8; letter-spacing: 1px; margin-top: 30px;">
+            <p class="story-text">
                 Eloria, modern kadının zamansız şıklığını ve zarafetini tamamlamak amacıyla kurulmuş butik bir takı markasıdır. 
                 Her bir tasarımımız, minimalist çizgilerle modern estetiği bir araya getirerek teninizde bir ışıltıya dönüşür. 
                 Sadece bir aksesuar değil, ruhunuzun ve tarzınızın bir parçası olacak özel parçalar üretiyoruz.
@@ -299,28 +371,28 @@
         </div>
     </section>
 
-    <section id="iletisim" style="padding: 90px 20px; background-color: #fdfbf7; border-top: 1px solid #f2ebe4;">
+    <section id="iletisim" class="contact-section">
         <div style="max-width: 600px; margin: 0 auto; text-align: center;">
             <h2 class="section-title">İletişim</h2>
-            <p style="font-size: 11pt; color: #666666; letter-spacing: 1px; margin-bottom: 40px;">
+            <p class="contact-subtitle">
                 Sorularınız, iş birlikleri veya özel sipariş talepleriniz için bizimle iletişime geçebilirsiniz.
             </p>
             
-            <div style="margin-bottom: 25px;">
-                <span style="font-weight: 600; color: #d4af37; letter-spacing: 1px; display: block; margin-bottom: 5px;">E-POSTA</span>
-                <a href="mailto:info@eloriajewelry.com" style="color: #2c2c2c; text-decoration: none; font-size: 11pt;">info@eloriajewelry.com</a>
+            <div style="margin-bottom: 35px;">
+                <span class="contact-label">E-Posta</span>
+                <a href="mailto:info@eloriajewelry.com" class="contact-link">info@eloriajewelry.com</a>
             </div>
             
-            <div style="margin-bottom: 10px;">
-                <span style="font-weight: 600; color: #d4af37; letter-spacing: 1px; display: block; margin-bottom: 5px;">SOSYAL MEDYA</span>
-                <a href="https://instagram.com" target="_blank" style="color: #2c2c2c; text-decoration: none; font-size: 11pt; letter-spacing: 1px;">@eloriajewelry</a>
+            <div style="margin-bottom: 15px;">
+                <span class="contact-label">Sosyal Medya</span>
+                <a href="https://instagram.com" target="_blank" class="contact-link">@eloriajewelry</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Eloria Jewelry. Tüm Hakları Saklıdır.</p>
-        <p style="font-size: 9pt; color: #666;">Zarafetin modern dokunuşuyla tasarlandı.</p>
+        <p>&copy; 2026 Eloria Jewelry.</p>
+        <p style="font-size: 7.5pt; color: #524F4B; letter-spacing: 1px;">Zarafetin modern dokunuşuyla tasarlandı.</p>
     </footer>
 
 </body>
